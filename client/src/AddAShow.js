@@ -60,8 +60,10 @@ const AddAShow = () => {
 						</div>
 					</div>
 				</div>
-				<button id="addASeasonButton">+ Add A Season</button>
-				<button id="saveSeriesButton">Save Series</button>
+				<div className="buttons">
+					<button id="addASeasonButton">+ Add A Season</button>
+					<button id="saveSeriesButton">Save Series</button>
+				</div>
 			</div>
 			{/* <div className="container viewTwo">
 				<div className="top">
