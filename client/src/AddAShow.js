@@ -5,7 +5,7 @@ const AddAShow = () => {
 			<div className="container viewOne">
 				<div className="top">
 					<input id="seriesNameInput" type="text" />
-					<button id="saveSeriesButton">Save Series</button>
+					<button id="saveSeriesNameButton">Save Series Name</button>
 				</div>
 				<div className="wrapper">
 					<div className="seasons">
@@ -61,6 +61,7 @@ const AddAShow = () => {
 					</div>
 				</div>
 				<button id="addASeasonButton">+ Add A Season</button>
+				<button id="saveSeriesButton">Save Series</button>
 			</div>
 			{/* <div className="container viewTwo">
 				<div className="top">
