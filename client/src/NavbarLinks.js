@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const links = [
   {
     title: "Home",
@@ -29,15 +31,25 @@ function LinksComponent() {
   // Adjusted function to include the additionalClass in className
   const generateLinks = () => {
     return links.map((link, index) => (
-      <a 
-        key={index}
-        href={link.url}
-        className={link.additionalClass} // Use additionalClass as className
-        target={link.externalLink ? "_blank" : undefined}
-        rel={link.externalLink ? "noopener noreferrer" : undefined}
-      >
-        {link.title}
-      </a>
+      link.externalLink ? (
+        <a 
+          key={index}
+          href={link.url} // Changed to `href` for external links
+          className={link.additionalClass} // Use additionalClass as className
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {link.title}
+        </a>
+      ) : (
+        <Link 
+          key={index}
+          to={link.url}
+          className={link.additionalClass} // Use additionalClass as className
+        >
+          {link.title}
+        </Link>
+      )
     ));
   };
 
