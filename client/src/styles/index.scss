@@ -132,6 +132,17 @@ body {
 			background-color: #000;
 			padding: 1rem;
 		}
+		#addASeasonButton {
+			color: white;
+			background-color: #008C27;
+			border: 0;
+			cursor: pointer;
+			padding: 1rem;
+			min-width: 200px;
+			&:hover {
+				background-color: #006b1e;
+			}
+		}
 		.buttons {
 			display: flex;
 			flex-direction: row;
@@ -141,17 +152,7 @@ body {
 				flex-direction: column;
 				gap: 1rem;
 			}
-			#addASeasonButton {
-				color: white;
-				background-color: #008C27;
-				border: 0;
-				cursor: pointer;
-				padding: 1rem;
-				min-width: 200px;
-				&:hover {
-					background-color: #006b1e;
-				}
-			}
+
 			#saveSeriesButton {
 				color: white;
 				background-color: #008C27;
@@ -265,7 +266,7 @@ body {
 					}
 					input {
 						padding: 1rem;
-						background: #313131;
+						background: #000;
 						border: 0;
 						color: white;
 					}
