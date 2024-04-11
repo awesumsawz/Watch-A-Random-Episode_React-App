@@ -1,36 +1,8 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const links = [
-  {
-    title: "Home",
-    url: "/",
-    externalLink: false,
-    additionalClass: ''
-  },
-  {
-    title: "Add A Show",
-    url: "/AddAShow",
-    externalLink: false,
-    additionalClass: ''
-  },
-  {
-    title: "Watch A Show",
-    url: "/WatchAShow",
-    externalLink: false,
-    additionalClass: ''
-  },
-  {
-    title: "Portfolio",
-    url: "https://jason-biggs.com",
-    externalLink: true,
-    additionalClass: 'external'
-  }
-];
-
-function LinksComponent() {
-  // Adjusted function to include the additionalClass in className
+function LinksComponent({ navlinks }) {
   const generateLinks = () => {
-    return links.map((link, index) => (
+    return navlinks.map((link, index) => (
       link.externalLink ? (
         <a 
           key={index}
@@ -42,13 +14,13 @@ function LinksComponent() {
           {link.title}
         </a>
       ) : (
-        <Link 
+        <NavLink 
           key={index}
           to={link.url}
           className={link.additionalClass} // Use additionalClass as className
         >
           {link.title}
-        </Link>
+        </NavLink>
       )
     ));
   };
