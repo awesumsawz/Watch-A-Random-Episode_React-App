@@ -1,0 +1,28 @@
+{
+	"navlinks": [
+		{
+			"title": "Home",
+			"url": "/",
+			"externalLink": false,
+			"additionalClass": ""
+		},
+		{
+			"title": "Add A Show",
+			"url": "/AddAShow",
+			"externalLink": false,
+			"additionalClass": ""
+		},
+		{
+			"title": "Watch A Show",
+			"url": "/WatchAShow",
+			"externalLink": false,
+			"additionalClass": ""
+		},
+		{
+			"title": "Portfolio",
+			"url": "https://jason-biggs.com",
+			"externalLink": true,
+			"additionalClass": "external"
+		}
+	]
+}
