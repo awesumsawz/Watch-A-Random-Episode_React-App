@@ -1,12 +1,9 @@
+import SaveSeriesName from "./AddAShowComponents/SaveSeriesName";
 const AddAShow = () => {
 	return (
 		<div className="addAShow">
 			<h2>Add A Series</h2>
 			<div className="container viewOne">
-				<div className="top">
-					<input id="seriesNameInput" type="text" />
-					<button id="saveSeriesNameButton">Save Series Name</button>
-				</div>
 				<div className="wrapper">
 					<div className="seasons">
 						<div className="left">
@@ -60,6 +57,7 @@ const AddAShow = () => {
 						</div>
 					</div>
 				</div>
+				<SaveSeriesName />
 				<div className="buttons">
 					<button id="addASeasonButton">+ Add A Season</button>
 					<button id="saveSeriesButton">Save Series</button>
