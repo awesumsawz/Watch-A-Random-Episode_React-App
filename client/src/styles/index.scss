@@ -233,6 +233,7 @@ body {
 			}
 		}
 		.right {
+
 			&.static {
 				display: grid;
 				grid-template-columns: 1fr 8rem;
@@ -253,12 +254,13 @@ body {
 				}
 			}
 			&.edit {
-				display: flex;
-				flex-direction: column;
+				display: grid;
+				grid-template-columns: 1fr 8rem;
+				align-items: center;
 				gap: 1rem;
 				.seasonEpisodes {
 					display: grid;
-					grid-template-columns: 2fr 1fr;
+					grid-template-columns: 65px auto;
 					gap: 1rem;
 					align-items: center;
 					@media (max-width: 700px) {
@@ -271,7 +273,7 @@ body {
 						color: white;
 					}
 				}
-				.addEpisodesButton {
+				.saveTrigger {
 					background-color: #008C27;
 					color: white;
 					border: 0;
@@ -279,10 +281,14 @@ body {
 					display: block;
 					margin-inline: auto;
 					padding: 1rem 2rem;
+					width: 100%;
 					&:hover {
 						background-color: #006b1e;
 					}
 				}
+			}
+			&.hidden {
+				display: none;
 			}
 		}
 	}
