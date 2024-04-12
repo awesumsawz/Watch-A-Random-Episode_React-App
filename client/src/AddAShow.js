@@ -1,13 +1,26 @@
+import { useState, useEffect } from "react";
 import SaveSeriesName from "./AddAShowComponents/SaveSeriesName";
 import SeasonBuilder from "./AddAShowComponents/SeasonBuilder";
 
 const AddAShow = () => {
+	const [series, setSeries] = useState(null);
+
+	useEffect(() => {
+		fetch("http://localhost:8000/series")
+		.then(res => {
+			return res.json()
+		})
+		.then(data=> {
+			setSeries(data)
+		})
+	}, []); //The empty dependency array restricts builds to initial only
+
 	return (
 		<div className="addAShow">
 			<h2>Add A Series</h2>
 			<div className="container viewOne">
 				<SaveSeriesName />
-				<SeasonBuilder />
+				{series && <SeasonBuilder targetSeries="Parks and Recreation" seriesList={series} />}
 				<div className="buttons">
 					<button id="saveSeriesButton">Save Series</button>
 				</div>
