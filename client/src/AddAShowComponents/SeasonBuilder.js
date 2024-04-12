@@ -1,44 +1,32 @@
 import { useState, useEffect } from "react";
 import SeasonBlockBuilder from "./SeasonBlockBuilder";
 
-function SeasonBuilder({targetSeries, seriesList}) {
-	const [seasons, setSeasons] = useState([]);
+function SeasonBuilder({ targetSeries, seriesList }) {
+    const [seasons, setSeasons] = useState({}); // Initialize seasons as an empty object
 
-	useEffect(()=> {
-		seriesList.forEach((element) => {
-			if (element.title === targetSeries) {
-				setSeasons(element.seasons);
-			}
-		});
-	}, [seriesList, targetSeries]);
+    useEffect(() => {
+        seriesList.forEach((series) => {
+            if (series.title === targetSeries) {
+                setSeasons(series.seasons || {}); // Ensure seasons is set as an object
+            }
+        });
+    }, [seriesList, targetSeries]);
 
-	const addSeason = () => {
-        const newId = seasons.length + 1; // Get next ID
-		const newSeason = { id: newId, episodes: {}, isEditable: true }; // Ensure episodes is an object
-        setSeasons([...seasons, newSeason]);
-	};
+    const addSeason = () => {
+        const newId = Object.keys(seasons).length + 1; // Get next ID based on the number of keys
+        const newSeason = { id: newId, episodes: {} }; // Initialize new season with episodes as an object
+        setSeasons({
+            ...seasons,
+            [newId]: newSeason // Use computed property name to add new season
+        });
+    };
 
-	return (
-		<div className="wrapper">
-			{seasons && <SeasonBlockBuilder seasons={seasons}/>}
-			
-
-			<div className="seasons">
-				<div className="left">
-					<span className="season">Season 3</span>
-				</div>
-				<div className="right edit">
-					<div className="seasonEpisodes">
-						<span>How Many Episodes in Season 3?</span>
-						<input type="text" />
-					</div>
-					<button className="addEpisodesButton">Save Episodes</button>
-				</div>
-			</div>
-
-			<button id="addASeasonButton" onClick={addSeason}>+ Add A Season</button>
-		</div>
-	)
+    return (
+        <div className="wrapper">
+            {Object.values(seasons).length > 0 && <SeasonBlockBuilder seasons={seasons} />}
+            <button id="addASeasonButton" onClick={addSeason}>+ Add A Season</button>
+        </div>
+    );
 }
 
 export default SeasonBuilder;
