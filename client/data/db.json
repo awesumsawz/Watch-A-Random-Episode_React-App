@@ -24,5 +24,112 @@
 			"externalLink": true,
 			"additionalClass": "external"
 		}
+	],
+	"series": [
+		{
+			"title": "Parks and Recreation",
+			"seasons": {
+				"1": {
+					"id" : 1,
+					"episodes": {
+						"1": {
+							"title": "Pilot"
+						},
+						"2": {
+							"title": "Canvassing"
+						},
+						"3": {
+							"title": "The Reporter"
+						},
+						"4": {
+							"title": "Boys' Club"
+						},
+						"5": {
+							"title": "The Banquet"
+						},
+						"6": {
+							"title": "Rock Show"
+						}
+					}
+				},
+				"2": {
+					"id" : 2,
+					"episodes": {
+						"1": {
+							"title": ""
+						},
+						"2": {
+							"title": ""
+						},
+						"3": {
+							"title": ""
+						},
+						"4": {
+							"title": ""
+						},
+						"5": {
+							"title": ""
+						},
+						"6": {
+							"title": ""
+						},
+						"7": {
+							"title": ""
+						},
+						"8": {
+							"title": ""
+						},
+						"9": {
+							"title": ""
+						},
+						"10": {
+							"title": ""
+						},
+						"11": {
+							"title": ""
+						},
+						"12": {
+							"title": ""
+						},
+						"13": {
+							"title": ""
+						},
+						"14": {
+							"title": ""
+						},
+						"15": {
+							"title": ""
+						},
+						"16": {
+							"title": ""
+						},
+						"17": {
+							"title": ""
+						},
+						"18": {
+							"title": ""
+						},
+						"19": {
+							"title": ""
+						},
+						"20": {
+							"title": ""
+						},
+						"21": {
+							"title": ""
+						},
+						"22": {
+							"title": ""
+						},
+						"23": {
+							"title": ""
+						},
+						"24": {
+							"title": ""
+						}
+					}
+				}
+			}
+		}
 	]
 }
