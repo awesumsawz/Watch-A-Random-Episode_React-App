@@ -27,15 +27,11 @@
 	],
 	"series": [
 		{
-			"title": "Parks and Recreation",
 			"id": 0,
 			"title": "parks_and_recreation_again",
 			"seasons": [
+				{
 					"id" : 1,
-							"title": "Canvassing"
-						},
-						},
-						"5": {
 					"episodes": 6
 				},
 				{
