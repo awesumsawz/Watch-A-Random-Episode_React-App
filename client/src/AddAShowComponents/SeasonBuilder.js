@@ -23,7 +23,7 @@ function SeasonBuilder({ targetSeries, seriesList }) {
 
     return (
         <div className="wrapper">
-            {Object.values(seasons).length > 0 && <SeasonBlockBuilder seasons={seasons} />}
+            {Object.values(seasons).length > 0 && targetSeries && <SeasonBlockBuilder seriesTitle={targetSeries} seasons={seasons} />}
             <button id="addASeasonButton" onClick={addSeason}>+ Add A Season</button>
         </div>
     );
