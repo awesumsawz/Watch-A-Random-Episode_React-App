@@ -20,7 +20,7 @@ const AddAShow = () => {
 			<h2>Add A Series</h2>
 			<div className="container viewOne">
 				<SaveSeriesName />
-				{series && <SeasonBuilder targetSeries="Parks and Recreation" seriesList={series} />}
+				{series && <SeasonBuilder targetSeries="parks_and_recreation" seriesList={series} />}
 				<div className="buttons">
 					<button id="saveSeriesButton">Save Series</button>
 				</div>
